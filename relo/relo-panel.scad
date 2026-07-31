@@ -41,6 +41,3 @@ module reloPanel() {
 
     
 }
-
-
-reloPanel();
