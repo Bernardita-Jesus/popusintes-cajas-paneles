@@ -1,6 +1,5 @@
 // popusintes-carcasas
 
-
 // constantes mecanicas eurorack
 // medidas en mm
 MODULO_ANCHO = 5.08;
@@ -9,19 +8,19 @@ MODULO_PROFUNDIDAD = 40.0;
 
 // margenes de los tornillos segun ejemplo vcv
 // medidos en mm
-RIEL_MARGEN_X = 7.62;
-RIEL_MARGEN_Y = 2.54; 
+MARGEN_X = 2.62;
+MARGEN_Y = 2.54; 
 
 
 // constantes tornillos M3
 // medidas en mm
 M3_DIAMETRO_PASO = 2.6;
-M3_DIAMETRO_HOLGURA = 3.4;
+M3_DIAMETRO_ = 3.4;
 
 // constantes roscas M3
 // medidas en mm
 // rosca usada como traduccion de boss
-ROSCA_DIAMETRO = 7;
+ROSCA_DIAMETRO = 2;
 ROSCA_ALTURA = 6;
-ROSCA_MARGEN = 5;
+ROSCA_TOLERANCIA = 5;
 ROSCA_DIAMETRO_PILOTO = 2.6;
