@@ -4,7 +4,16 @@
 // medidas en mm
 MODULO_ANCHO = 5.08;
 MODULO_ALTURA_3U  = 128.4; 
-MODULO_PROFUNDIDAD = 40.0;
+MODULO_PROFUNDIDAD = 20.0;
+PANEL_PROFUNDIDAD = 3.0;
+
+// constantes para panel
+// perilla
+ RADIO_PERILLA_CHICA = 5;
+
+// radio de redondeo de las esquinas del panel
+RADIO_BORDE_PANEL = 2;
+
 
 // margenes de los tornillos segun ejemplo vcv
 // medidos en mm
