@@ -1,5 +1,9 @@
 # Apple
 .DS_Store
 
+# Tipografias
+fonts/
+
 # STLs
 *.stl
+
