@@ -2,7 +2,7 @@
 
 include <./constantes.scad>
 
-// texto grabado en la cara exterior de la base
+// fuente del texto
 grabado_fuente   = "Talagante:style=Regular";
 // profundidad del grabado, menor que "pared"
 grabado_hondo    = 0.6;
