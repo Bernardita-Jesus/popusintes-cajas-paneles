@@ -1,10 +1,20 @@
-// popusintes-carcasas
+// constantes.scad
 
 // constantes mecanicas eurorack
 // medidas en mm
 MODULO_ANCHO = 5.08;
-MODULO_ALTURA_3U  = 128.4; 
-MODULO_PROFUNDIDAD = 20.0;
+MODULO_ALTURA_3U  = 128.4;
+
+// caja medidas ideales, internas
+CAJA_ANCHO = MODULO_ANCHO;
+CAJA_ALTURA = MODULO_ALTURA_3U;
+CAJA_PROFUNDIDAD = 20.0;
+// medidas de pared de caja en mm
+CAJA_PARED = 2.0;
+
+// panel medidas ideales, exteriores
+PANEL_ANCHO = MODULO_ANCHO;
+PANEL_ALTURA = MODULO_ALTURA_3U;
 PANEL_PROFUNDIDAD = 3.0;
 
 // constantes para panel

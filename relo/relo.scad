@@ -2,7 +2,7 @@
 
 $fn = 32;
 
-include <./relo-caja.scad>
-include <./relo-panel.scad>
+include <./relo_caja.scad>
+include <./relo_panel.scad>
 
 relo_caja();
