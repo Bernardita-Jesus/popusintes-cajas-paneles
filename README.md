@@ -6,6 +6,12 @@ carcasas paramétricas en OpenSCAD
 
 Este repositorio contiene los archivos escritos en OpenSCAD para generar cajas y paneles para el proyecto Popusintes, una colección de sintetizadores modulares
 
+Al clonar el repositorio, ejecutar este comando una vez para activar el hook de pre-commit que corrige automáticamente estilo en los archivos `.scad`:
+
+```bash
+git config core.hooksPath .githooks
+```
+
 ## Estructura del repositorio
 
 ### Configuracion

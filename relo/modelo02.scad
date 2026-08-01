@@ -3,13 +3,13 @@
 // constantes mecanicas eurorack
 // medidas en mm
 // MODULO_ANCHO = 5.08;
-// MODULO_ALTURA_3U  = 128.4; 
+// MODULO_ALTURA_3U  = 128.4;
 // MODULO_PROFUNDIDAD = 40.0;
 
 // margenes de los tornillos segun ejemplo vcv
 // medidos en mm
 // RIEL_MARGEN_X = 7.62;
-// RIEL_MARGEN_Y = 2.54; 
+// RIEL_MARGEN_Y = 2.54;
 
 // constantes tornillos M3
 // medidas en mm
@@ -52,8 +52,8 @@ module perillaChicaPrueba(x, y) {
 translate([x, y, -AGUJERO_ALTURA/2])
 color("plum")
 cylinder(
-h = AGUJERO_ALTURA, 
-r = 3, 
+h = AGUJERO_ALTURA,
+r = 3,
 center = false
 );
 
@@ -79,8 +79,8 @@ translate([10, ALTO/2 - ALTO*0.30, -AGUJERO_ALTURA/2
 ])
 color("plum")
 cylinder(
-h = AGUJERO_ALTURA, 
-r = 6, 
+h = AGUJERO_ALTURA,
+r = 6,
 center = false
 );
 
@@ -89,4 +89,3 @@ perillaChicaPrueba(COLUMNA_IZQ, ALTO*0.40);
 perillaChicaPrueba(COLUMNA_IZQ, ALTO*0.70);
 
 perillaChicaPrueba(COLUMNA_IZQ, ALTO*0.90);
-
