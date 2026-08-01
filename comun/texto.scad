@@ -5,7 +5,7 @@ include <./constantes.scad>
 // texto grabado en la cara exterior de la base
 grabado_fuente   = "Talagante:style=Regular";
 // profundidad del grabado, menor que "pared"
-grabado_hondo    = 0.6; 
+grabado_hondo    = 0.6;
 
 module texto_base(texto, tamano, x, y) {
   translate([x, y, -0.01])

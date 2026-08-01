@@ -12,8 +12,8 @@ module recta_panel() {
     profundidad = PANEL_PROFUNDIDAD;
 
     // suavidad de círculos/cilindros
-    $fn = 32; 
-    
+    $fn = 32;
+
     difference() {
 
     // esquinas redondeadas via minkowski en 2D
@@ -40,5 +40,5 @@ module recta_panel() {
     }
     }
 
-    
+
 }

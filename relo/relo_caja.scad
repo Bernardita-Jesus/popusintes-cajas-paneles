@@ -10,17 +10,17 @@ module relo_caja() {
   ancho       = CAJA_ANCHO * RELO_HP;
   altura      = CAJA_ALTURA;
   profundidad = CAJA_PROFUNDIDAD;
-  
+
   pared = 2.0;
-  
+
   // redondeo de esquinas exteriores verticales
-  radio_esquina = 1.5; 
-  
+  radio_esquina = 1.5;
+
   // altura del chaflan guía en agujeros piloto
-  chaflan_alto  = 0.6; 
+  chaflan_alto  = 0.6;
   // diámetro ancho del chaflan
   chaflan_diam  = ROSCA_DIAMETRO_PILOTO + 1.4;
-  
+
   // caja con esquinas verticales redondeadas
   module caja_redondeada(a, al, p, r) {
       minkowski() {
@@ -29,7 +29,7 @@ module relo_caja() {
               cylinder(r=r, h=0.01);
       }
   }
-  
+
   module cuerpo() {
     difference() {
       union() {
@@ -37,7 +37,7 @@ module relo_caja() {
       // con esquinas exteriores redondeadas
         difference() {
           caja_redondeada(ancho, altura, profundidad, radio_esquina);
-          
+
           translate([pared, pared, -1])
             cube([
                 ancho - 2 * pared,
@@ -48,7 +48,7 @@ module relo_caja() {
       }
     }
   }
-  
+
 
 
   module base() {
@@ -64,7 +64,7 @@ module relo_caja() {
       // grabados en la base
       texto_base(RELO_TEXTO, MODULO_ALTURA_3U * 0.05, ancho/2, 40*altura/100);
       texto_base(RELO_VERSION, MODULO_ALTURA_3U * 0.05, ancho/2, 60*altura/100);
-    
+
     }
   }
 

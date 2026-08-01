@@ -3,7 +3,7 @@
 // constantes mecanicas eurorack
 // medidas en mm
 MODULO_ANCHO = 5.08;
-MODULO_ALTURA_3U  = 128.4; 
+MODULO_ALTURA_3U  = 128.4;
 
 // caja medidas ideales, internas
 CAJA_ANCHO = MODULO_ANCHO;
@@ -28,7 +28,7 @@ RADIO_BORDE_PANEL = 2;
 // margenes de los tornillos segun ejemplo vcv
 // medidos en mm
 RIEL_MARGEN_X = 7.62;
-RIEL_MARGEN_Y = 2.54; 
+RIEL_MARGEN_Y = 2.54;
 
 
 // constantes tornillos M3

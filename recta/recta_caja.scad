@@ -15,17 +15,17 @@ module recta_caja() {
   ancho_ext       = 2 * CAJA_PARED + ancho_int;
   altura_ext      = 2 * CAJA_PARED + altura_int;
   profundidad_ext = 1 * CAJA_PARED + profundidad_int;
-  
+
   pared = CAJA_PARED;
-  
+
   // redondeo de esquinas exteriores verticales
-  radio_esquina = 1.5; 
-  
+  radio_esquina = 1.5;
+
   // altura del chaflan guía en agujeros piloto
-  chaflan_alto  = 0.6; 
+  chaflan_alto  = 0.6;
   // diámetro ancho del chaflan
   chaflan_diam  = ROSCA_DIAMETRO_PILOTO + 1.4;
-  
+
   // caja con esquinas verticales redondeadas
   module caja_redondeada(a, al, p, r) {
       minkowski() {
@@ -34,7 +34,7 @@ module recta_caja() {
               cylinder(r=r, h=0.01);
       }
   }
-  
+
   module cuerpo() {
     difference() {
       union() {
@@ -46,18 +46,18 @@ module recta_caja() {
           altura_ext,
           profundidad_ext,
           radio_esquina);
-          
+
           translate([pared, pared, -1])
             cube([
                 ancho_int,
                 altura_int,
-                2*profundidad_ext
+                2*profundidad_ex
             ], center=false);
         }
       }
     }
   }
-  
+
 
   module base() {
     difference() {
