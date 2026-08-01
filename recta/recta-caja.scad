@@ -1,18 +1,22 @@
-// relo
-// caja
+// recta-caja.scad
 
 include <../comun/constantes.scad>
 include <../comun/texto.scad>
 include <../comun/versiones.scad>
 
+// CAJA_ANCHO = MODULO_ANCHO * 1.05
 
-module relo_caja() {
+module recta_caja() {
 
-  ancho       = CAJA_ANCHO * RELO_HP;
-  altura      = CAJA_ALTURA;
-  profundidad = CAJA_PROFUNDIDAD;
+  ancho_int       = CAJA_ANCHO * RECTA_HP;
+  altura_int      = CAJA_ALTURA;
+  profundidad_int = CAJA_PROFUNDIDAD;
+
+  ancho_ext       = 2 * CAJA_PARED + ancho_int;
+  altura_ext      = 2 * CAJA_PARED + altura_int;
+  profundidad_ext = 1 * CAJA_PARED + profundidad_int;
   
-  pared = 2.0;
+  pared = CAJA_PARED;
   
   // redondeo de esquinas exteriores verticales
   radio_esquina = 1.5; 
@@ -37,13 +41,17 @@ module relo_caja() {
       // caja hueca
       // con esquinas exteriores redondeadas
         difference() {
-          caja_redondeada(ancho, altura, profundidad, radio_esquina);
+          caja_redondeada(
+          ancho_ext,
+          altura_ext,
+          profundidad_ext,
+          radio_esquina);
           
           translate([pared, pared, -1])
             cube([
-                ancho - 2 * pared,
-                altura - 2 * pared,
-                profundidad + 2
+                ancho_int,
+                altura_int,
+                2*profundidad_ext
             ], center=false);
         }
       }
@@ -51,21 +59,25 @@ module relo_caja() {
   }
   
 
-
   module base() {
     difference() {
       caja_redondeada(
-        ancho*0.99,
-        altura*0.99,
+        ancho_ext,
+        altura_ext,
         pared,
         radio_esquina);
 
-
-
       // grabados en la base
-      texto_base(RELO_TEXTO, MODULO_ALTURA_3U * 0.05, ancho/2, 40*altura/100);
-      texto_base(RELO_VERSION, MODULO_ALTURA_3U * 0.05, ancho/2, 60*altura/100);
-    
+      texto_base(
+      RECTA_TEXTO,
+      MODULO_ALTURA_3U * 0.08,
+      ancho_ext/2,
+      40*altura_ext/100);
+      texto_base(
+      RECTA_VERSION,
+      MODULO_ALTURA_3U * 0.05,
+      ancho_ext/2,
+      60 * altura_ext/100);
     }
   }
 
