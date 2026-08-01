@@ -17,10 +17,16 @@ Este repositorio contiene los archivos escritos en OpenSCAD para generar cajas y
 
 ### Cajas y paneles de los módulos
 
-- [bote](./bote/): archivos para bote, una carcasa que almacena un sistema.
-- [comun](./comun/): archivos comunes a todas las carcasas, con constances y funciones.
-- [recta](./recta/): archivos para el módulo recta.
-- [reloj](./reloj/): archivos para el módulo relo.
+- [comun](./comun/): archivos comunes a todas las cajas y paneles, con constances y funciones.
+
+Módulos:
+
+- [recta](./recta/)
+- [relo](./reloj/)
+
+Bote:
+
+[bote](./bote/):
 
 ## Licencia
 
