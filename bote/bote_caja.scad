@@ -1,14 +1,12 @@
-// recta_caja.scad
+// bote_caja.scad
 
 include <../comun/constantes.scad>
 include <../comun/texto.scad>
 include <../comun/versiones.scad>
 
-// CAJA_ANCHO = MODULO_ANCHO * 1.05
+module bote_caja(hp = 1) {
 
-module recta_caja() {
-
-  ancho_int       = CAJA_ANCHO * RECTA_HP;
+  ancho_int       = CAJA_ANCHO * hp;
   altura_int      = CAJA_ALTURA;
   profundidad_int = CAJA_PROFUNDIDAD;
 
@@ -69,12 +67,12 @@ module recta_caja() {
 
       // grabados en la base
       texto_base(
-      RECTA_TEXTO,
+      BOTE_TEXTO,
       MODULO_ALTURA_3U * 0.08,
       ancho_ext/2,
       40*altura_ext/100);
       texto_base(
-      RECTA_VERSION,
+      BOTE_VERSION,
       MODULO_ALTURA_3U * 0.05,
       ancho_ext/2,
       60 * altura_ext/100);

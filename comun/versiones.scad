@@ -2,6 +2,10 @@
 
 include <./constantes.scad>
 
+
+BOTE_TEXTO = "bote";
+BOTE_VERSION = "v0.0.1";
+
 RECTA_TEXTO = "recta";
 RECTA_VERSION = "v0.0.1";
 RECTA_HP = 6;
