@@ -28,7 +28,7 @@ RADIO_BORDE_PANEL = 2;
 // margenes de los tornillos segun ejemplo vcv
 // medidos en mm
 MARGEN_X = 2.62;
-MARGEN_Y = 2.54; 
+MARGEN_Y = 2.54;
 
 
 // constantes tornillos M3
