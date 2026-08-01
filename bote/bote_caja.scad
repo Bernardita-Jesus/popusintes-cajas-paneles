@@ -1,4 +1,4 @@
-// recta-caja.scad
+// recta_caja.scad
 
 include <../comun/constantes.scad>
 include <../comun/texto.scad>

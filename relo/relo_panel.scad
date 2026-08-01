@@ -1,13 +1,14 @@
-// recta-panel.scad
+// relo_panel.scad
 
+// constantes numericas
 include <../comun/constantes.scad>
 include <../comun/perillas.scad>
 include <../comun/texto.scad>
 include <../comun/versiones.scad>
 
 
-module rectaPanel() {
-    ancho       = MODULO_ANCHO * 5.0;
+module relo_panel() {
+    ancho       = MODULO_ANCHO * RELO_VERSION;
     altura      = MODULO_ALTURA_3U;
     profundidad = PANEL_PROFUNDIDAD;
 
