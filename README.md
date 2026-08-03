@@ -1,6 +1,6 @@
-# popusintes-carcasas
+# popusintes-cajas-paneles
 
-carcasas paramétricas en OpenSCAD
+cajas y paneles paramétriques en OpenSCAD
 
 ## Desarrollo
 
