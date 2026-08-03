@@ -27,9 +27,7 @@ AGUJERO_ALTURA = 30;
 
 $fn = 100;
 
-// Panel centrado
-color("magenta")
-cube([ANCHO, ALTO, ESPESOR], center = false);
+
 
 // Posiciones relativas
 BORDE = ANCHO * 0.20;      // 20% desde el borde
@@ -74,6 +72,14 @@ center = false
 
 }
 
+
+difference() {
+
+// Panel centrado
+color("magenta")
+cube([ANCHO, ALTO, ESPESOR], center = false);
+
+union() {
 // todas las medidas son aprox
 
 ////////////////////
@@ -82,29 +88,38 @@ center = false
 
 // perilla tempo
 
-perillaGrandePrueba(COLUMNA_IZQ, ALTO*0.20);
+perillaGrandePrueba(COLUMNA_IZQ, ALTO*0.16);
 
 // boton resincronizar
-perillaChicaPrueba(COLUMNA_IZQ, ALTO*0.50);
+perillaChicaPrueba(COLUMNA_IZQ, ALTO*0.36);
 
 // jack resincronizar
-perillaChicaPrueba(COLUMNA_IZQ, ALTO*0.60);
+perillaChicaPrueba(COLUMNA_IZQ, ALTO*0.46);
 
 //////////////////
 // columna derecha
 //////////////////
 
 // perilla desfase b
+perillaChicaPrueba(COLUMNA_DER, ALTO*0.70);
 
-// perilla desface atenuv
+// perilla desface atenuversor
+perillaChicaPrueba(COLUMNA_DER, ALTO*0.80);
 
 // jack desfase b
+perillaChicaPrueba(COLUMNA_DER, ALTO*0.90);
 
 //////////////////
 // salidas
 //////////////////
 
+// luz a
 
+// jack a
+
+// luz b
+
+// jack b
 
 // perillaChicaPrueba(COLUMNA_IZQ, ALTO*0.60);
 
@@ -115,3 +130,6 @@ perillaChicaPrueba(COLUMNA_IZQ, ALTO*0.60);
 
 // ladoDerecho
 // perillaChicaPrueba(COLUMNA_DER, ALTO*0.99);
+}
+
+}
