@@ -21,7 +21,7 @@ BORDE = ANCHO * 0.20;      // 20% desde el borde
 CENTRO = 0;
 
 ////////////////////
-// REFERENCIAS DE LOS PERNOS
+// referencias de los pernos
 ////////////////////
 
 // Distancia de los pernos respecto a los bordes del panel
@@ -51,21 +51,21 @@ module agujero_perno() {
     );
 }
 
-// cilindro pequeña para botones
-module perillaChicaPrueba(x, y) {
+// cilindro pequeño leds
+module cilindroMini(x, y) {
 
 translate([x, y, -AGUJERO_ALTURA/2])
 color("plum")
 cylinder(
 h = AGUJERO_ALTURA,
-r = 2,
+r = 1.7,
 center = false
 );
 
 }
 
 // cilindro mediana para jacks ts
-module perillaMedianaPrueba(x, y) {
+module cilindroMediano(x, y) {
 
 translate([x, y, -AGUJERO_ALTURA/2])
 color("plum")
@@ -77,8 +77,21 @@ center = false
 
 }
 
+// cilindro pequeña para botones
+module cilindroPerilla(x, y) {
+
+translate([x, y, -AGUJERO_ALTURA/2])
+color("plum")
+cylinder(
+h = AGUJERO_ALTURA,
+r = 4.4,
+center = false
+);
+
+}
+
 // cilindro grande para perilla
-module perillaGrandePrueba(x, y) {
+module cilindroGrande(x, y) {
 
 translate([x, y, -AGUJERO_ALTURA/2])
 color("plum")
@@ -97,47 +110,50 @@ color("magenta")
 cube([ANCHO, ALTO, ESPESOR], center = false);
 
 union() {
-// todas las medidas son aprox
+
+// todas las medidas de distancias son aprox
 
 ////////////////////
 // columna izquierda
 ////////////////////
 
 // perilla tempo
-perillaGrandePrueba(COLUMNA_IZQ, ALTO*0.16);
+cilindroGrande(COLUMNA_IZQ, ALTO*0.16);
 
 // boton resincronizar
-perillaChicaPrueba(COLUMNA_IZQ, ALTO*0.36);
+cilindroMediano(COLUMNA_IZQ, ALTO*0.35);
 
 // jack resincronizar
-perillaMedianaPrueba(COLUMNA_IZQ, ALTO*0.46);
+cilindroMediano(COLUMNA_IZQ, ALTO*0.43);
 
 // luz a
+cilindroMini(COLUMNA_IZQ, ALTO*0.85);
 
 // jack a
-perillaMedianaPrueba(COLUMNA_IZQ, ALTO*0.89);
-
+cilindroMediano(COLUMNA_IZQ, ALTO*0.90);
 
 //////////////////
 // columna derecha
 //////////////////
 
 // perilla desfase b
-perillaChicaPrueba(COLUMNA_DER, ALTO*0.55);
+cilindroPerilla(COLUMNA_DER, ALTO*0.58);
 
 // perilla desface atenuversor
-perillaChicaPrueba(COLUMNA_DER, ALTO*0.65);
+cilindroMediano(COLUMNA_DER, ALTO*0.67);
 
 // jack desfase b
-perillaMedianaPrueba(COLUMNA_DER, ALTO*0.75);
+cilindroMediano(COLUMNA_DER, ALTO*0.75);
 
 // luz b
+cilindroMini(COLUMNA_DER, ALTO*0.85);
 
 // jack b
-perillaMedianaPrueba(COLUMNA_DER, ALTO*0.89);
+cilindroMediano(COLUMNA_DER, ALTO*0.90);
 
 ////////////////////
 // diferencias para los pernos
+// no referenciados a las columnas
 ////////////////////
 
 // Perno superior izquierdo
