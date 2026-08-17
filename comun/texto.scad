@@ -3,11 +3,9 @@
 include <./constantes.scad>
 
 // fuente del texto
-grabado_fuente   = "Talagante:style=Regular";
-// fuente segura incluida con openscad, sin instalacion
-// util para piezas que se comparten con colegas
-// que no tienen grabado_fuente instalada
-grabado_fuente_failsafe = "Liberation Sans:style=Bold";
+// incluida con openscad, sin instalacion
+// para que el grabado se vea igual en cualquier maquina
+grabado_fuente   = "Liberation Sans:style=Bold";
 // profundidad del grabado, menor que "pared"
 grabado_hondo    = 0.6;
 

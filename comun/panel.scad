@@ -38,12 +38,10 @@ module panel(
                 perillaChica(ancho/2, i*100/(num_perillas+1) * altura/100, profundidad);
 
             // grabados en la parte baja de la cara trasera
-            // fuente failsafe: este panel se comparte con colegas
-            // que no tienen grabado_fuente instalada
             if (texto != "")
-                texto_base(texto, altura * 0.025, ancho/2, altura * 0.06, grabado_fuente_failsafe);
+                texto_base(texto, altura * 0.025, ancho/2, altura * 0.06);
             if (version != "")
-                texto_base(version, altura * 0.018, ancho/2, altura * 0.12, grabado_fuente_failsafe);
+                texto_base(version, altura * 0.018, ancho/2, altura * 0.12);
         }
     }
 }

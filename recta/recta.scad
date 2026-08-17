@@ -5,4 +5,4 @@ $fn = 32;
 include <./recta_caja.scad>
 include <./recta_panel.scad>
 
-recta_caja();
+recta_panel();
