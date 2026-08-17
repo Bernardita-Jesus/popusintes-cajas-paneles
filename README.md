@@ -15,10 +15,10 @@ git config core.hooksPath .githooks
 Para exportar todas las cajas y paneles a `.stl` con un solo comando:
 
 ```bash
-./scripts/build-stls.sh
+./scripts/exportar-stl.sh
 ```
 
-Esto deja los archivos en `stl/`. También se puede filtrar por nombre de pieza, por ejemplo `./scripts/build-stls.sh relo` exporta solo `relo_caja.stl` y `relo_panel.stl`. Requiere tener `openscad` instalado (en Mac, si no está en el `PATH`, el script busca automáticamente `/Applications/OpenSCAD.app`).
+Esto deja los archivos en `stl/`. También se puede filtrar por nombre de pieza, por ejemplo `./scripts/exportar-stl.sh relo` exporta solo `relo_caja.stl` y `relo_panel.stl`. Requiere tener `openscad` instalado (en Mac, si no está en el `PATH`, el script busca automáticamente `/Applications/OpenSCAD.app`).
 
 ## Estructura del repositorio
 
