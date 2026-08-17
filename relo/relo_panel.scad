@@ -2,6 +2,7 @@
 
 include <../comun/constantes.scad>
 include <../comun/versiones.scad>
+include <../comun/texto.scad>
 
 module relo_panel() {
 
@@ -163,6 +164,16 @@ module relo_panel() {
 
       // Perno inferior derecho
       translate([PERNO_DERECHO, PERNO_INFERIOR, -1]) agujero_perno();
+
+      ////////////////////
+      // grabados en la cara trasera
+      // franja libre de agujeros bajo el perno inferior
+      // fuente failsafe: este panel se comparte con colegas
+      // que no tienen grabado_fuente instalada
+      ////////////////////
+
+      texto_base(RELO_TEXTO, ALTO * 0.018, ANCHO/2, ALTO * 0.055, grabado_fuente_failsafe);
+      texto_base(RELO_VERSION, ALTO * 0.0155, ANCHO/2, ALTO * 0.093, grabado_fuente_failsafe);
 
     }
 

@@ -2,12 +2,15 @@
 
 include <./constantes.scad>
 include <./perillas.scad>
+include <./texto.scad>
 
 module panel(
     ancho,
     altura = MODULO_ALTURA_3U,
     profundidad = PANEL_PROFUNDIDAD,
-    num_perillas = 3
+    num_perillas = 3,
+    texto = "",
+    version = ""
 ) {
     // suavidad de círculos/cilindros
     $fn = 32;
@@ -33,6 +36,14 @@ module panel(
         union() {
             for (i = [1 : num_perillas])
                 perillaChica(ancho/2, i*100/(num_perillas+1) * altura/100, profundidad);
+
+            // grabados en la parte baja de la cara trasera
+            // fuente failsafe: este panel se comparte con colegas
+            // que no tienen grabado_fuente instalada
+            if (texto != "")
+                texto_base(texto, altura * 0.025, ancho/2, altura * 0.06, grabado_fuente_failsafe);
+            if (version != "")
+                texto_base(version, altura * 0.018, ancho/2, altura * 0.12, grabado_fuente_failsafe);
         }
     }
 }
