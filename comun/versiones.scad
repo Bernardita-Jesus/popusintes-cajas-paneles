@@ -12,7 +12,7 @@ RECTA_HP = 6;
 
 RELO_TEXTO = "relo";
 RELO_VERSION = "v0.0.1";
-RELO_HP = 4;
+RELO_HP = 5;
 
 // versiones v0.0.x
 // pruebas de tamano
