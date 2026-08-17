@@ -8,14 +8,14 @@ module relo_panel() {
   // medidas del panel
   ANCHO = MODULO_ANCHO * RELO_HP;
   ALTO = MODULO_ALTURA_3U;
-  ESPESOR = 2;
+  ESPESOR = PANEL_ESPESOR;
 
   // columnas para los elementos
   COLUMNA_IZQ = ANCHO * 0.30;
   COLUMNA_DER = ANCHO * 0.70;
 
   // profundidad de agujeros
-  AGUJERO_ALTURA = 30;
+  AGUJERO_ALTURA = ALTURA_AGUJERO_CONECTOR;
 
   // cantidad de caras de los cilindros
   $fn = 100;
@@ -25,8 +25,7 @@ module relo_panel() {
   ////////////////////
 
   // Distancia de los pernos respecto a los bordes del panel
-  MARGEN_X = 7.5;
-  MARGEN_Y = 3;
+  // MARGEN_X y MARGEN_Y definidos en comun/constantes.scad
 
   // Posición horizontal de los pernos
   PERNO_IZQUIERDO = MARGEN_X;
@@ -40,13 +39,10 @@ module relo_panel() {
   // PERFORACIÓN PARA LOS PERNOS
   //////////////////////
 
-  // Diámetro del agujero para el tornillo de montaje
-  DIAMETRO_PERNO = 3.4;
-
   module agujero_perno() {
     cylinder(
       h = ESPESOR + 2,   // Atraviesa completamente el panel
-      d = DIAMETRO_PERNO,
+      d = M3_DIAMETRO_,  // Diámetro del agujero para el tornillo de montaje
       $fn = 50
     );
   }
@@ -58,7 +54,7 @@ module relo_panel() {
     color("plum")
     cylinder(
       h = AGUJERO_ALTURA,
-      r = 1.7,
+      r = RADIO_AGUJERO_LED,
       center = false
     );
 
@@ -71,7 +67,7 @@ module relo_panel() {
     color("plum")
     cylinder(
       h = AGUJERO_ALTURA,
-      r = 3.25,
+      r = RADIO_AGUJERO_JACK,
       center = false
     );
 
@@ -84,7 +80,7 @@ module relo_panel() {
     color("plum")
     cylinder(
       h = AGUJERO_ALTURA,
-      r = 4.4,
+      r = RADIO_AGUJERO_BOTON,
       center = false
     );
 
@@ -97,7 +93,7 @@ module relo_panel() {
     color("plum")
     cylinder(
       h = AGUJERO_ALTURA,
-      r = 5.6,
+      r = RADIO_AGUJERO_PERILLA,
       center = false
     );
 
