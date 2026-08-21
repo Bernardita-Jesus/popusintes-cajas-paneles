@@ -211,8 +211,8 @@ module rerelo_panel() {
       // franja libre de agujeros bajo el perno inferior
       ////////////////////
 
-      texto_base(RERELO_TEXTO, ALTO * 0.018, ANCHO/2, ALTO * 0.055);
-      texto_base(RERELO_VERSION, ALTO * 0.0155, ANCHO/2, ALTO * 0.093);
+      texto_base(RERELO_TEXTO, ALTO * 0.024, ANCHO/2, ALTO * 0.055);
+      texto_base(RERELO_VERSION, ALTO * 0.02, ANCHO/2, ALTO * 0.093);
 
     }
 
