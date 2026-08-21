@@ -36,6 +36,8 @@ piezas=(
   "recta_panel:recta:recta_panel.scad:recta_panel()"
   "relo_caja:relo:relo_caja.scad:relo_caja()"
   "relo_panel:relo:relo_panel.scad:relo_panel()"
+  "rerelo_caja:rerelo:rerelo_caja.scad:rerelo_caja()"
+  "rerelo_panel:rerelo:rerelo_panel.scad:rerelo_panel()"
 )
 
 filtros=("$@")
