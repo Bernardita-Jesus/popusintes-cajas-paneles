@@ -3,11 +3,13 @@
 include <./constantes.scad>
 
 // fuente del texto
-grabado_fuente   = "Talagante:style=Regular";
+// incluida con openscad, sin instalacion
+// para que el grabado se vea igual en cualquier maquina
+grabado_fuente   = "Liberation Sans:style=Bold";
 // profundidad del grabado, menor que "pared"
 grabado_hondo    = 0.6;
 
-module texto_base(texto, tamano, x, y) {
+module texto_base(texto, tamano, x, y, fuente = grabado_fuente) {
   translate([x, y, -0.01])
   // espejo en y
   // text() se ve desde el lado -z
@@ -17,7 +19,7 @@ module texto_base(texto, tamano, x, y) {
   text(
     texto,
     size   = tamano,
-    font   = grabado_fuente,
+    font   = fuente,
     halign = "center",
     valign = "center"
     );

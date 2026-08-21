@@ -12,12 +12,20 @@ Al clonar el repositorio, ejecutar este comando una vez para activar el hook de 
 git config core.hooksPath .githooks
 ```
 
+Para exportar todas las cajas y paneles a `.stl` con un solo comando:
+
+```bash
+./scripts/exportar-stl.sh
+```
+
+Esto deja los archivos en `stl/`. También se puede filtrar por nombre de pieza, por ejemplo `./scripts/exportar-stl.sh relo` exporta solo `relo_caja.stl` y `relo_panel.stl`. Requiere tener `openscad` instalado (en Mac, si no está en el `PATH`, el script busca automáticamente `/Applications/OpenSCAD.app`).
+
 ## Estructura del repositorio
 
 ### Configuracion
 
 - [.github/](./.github/): archivos de configuración y automatizaciones para GitHub.
-- [scripts/](./scripts/): scripts para mantenimiento y linting de los archivos.
+- [scripts/](./scripts/): scripts para mantenimiento, linting y exportado a `.stl` de los archivos.
 - [LICENSE](./LICENSE): licencia del repositorio.
 - [README.md](./README.md): este archivo, con información del repositorio.
 - [comun/](./comun/): archivos comunes a todas las cajas y paneles, con constances y funciones.

@@ -26,13 +26,29 @@ module caja(
   altura_ext      = 2 * pared + altura_int;
   profundidad_ext = pared + profundidad_int;
 
+  // profundidad del asiento donde calza el panel, y donde
+  // por lo tanto empieza el lip que lo detiene
+  lip_profundidad = pared;
+  profundidad_asiento = profundidad_ext - lip_profundidad;
+
   module cuerpo() {
     difference() {
       // caja hueca con esquinas exteriores redondeadas
       caja_redondeada(ancho_ext, altura_ext, profundidad_ext, radio_esquina);
 
-      translate([pared, pared, -1])
-        cube([ancho_int, altura_int, 2 * profundidad_ext], center=false);
+      // cavidad angosta desde la base hasta el lip: deja un
+      // reborde perimetral de ancho = pared que detiene al panel
+      translate([2 * pared, 2 * pared, -1])
+        cube([
+          ancho_int - 2 * pared,
+          altura_int - 2 * pared,
+          profundidad_asiento + 1
+        ], center=false);
+
+      // asiento del panel: cavidad de ancho completo cerca del
+      // frente, donde el panel calza apoyado sobre el lip
+      translate([pared, pared, profundidad_asiento])
+        cube([ancho_int, altura_int, lip_profundidad + 1], center=false);
     }
   }
 
