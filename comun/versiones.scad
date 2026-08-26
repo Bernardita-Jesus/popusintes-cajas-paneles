@@ -6,6 +6,22 @@ include <./constantes.scad>
 BOTE_TEXTO = "bote";
 BOTE_VERSION = "v0.0.3";
 
+ATACONSO_TEXTO = "ataconso";
+ATACONSO_VERSION = "v0.0.1";
+ATACONSO_HP = 4;
+
+COMPA_TEXTO = "compa";
+COMPA_VERSION = "v0.0.1";
+COMPA_HP = 4;
+
+ENVO_TEXTO = "envo";
+ENVO_VERSION = "v0.0.1";
+ENVO_HP = 4;
+
+PANE_TEXTO = "pane";
+PANE_VERSION = "v0.0.1";
+PANE_HP = 5;
+
 RECTA_TEXTO = "recta";
 RECTA_VERSION = "v0.0.3";
 RECTA_HP = 6;
@@ -17,6 +33,14 @@ RELO_HP = 4;
 RERELO_TEXTO = "rerelo";
 RERELO_VERSION = "v0.0.3";
 RERELO_HP = 8;
+
+SECU_TEXTO = "secu";
+SECU_VERSION = "v0.0.1";
+SECU_HP = 8;
+
+SUMA_TEXTO = "suma";
+SUMA_VERSION = "v0.0.1";
+SUMA_HP = 4;
 
 // versiones v0.0.x
 // pruebas de tamano

@@ -1,5 +1,5 @@
 // caja.scad
-// caja generica reutilizada por bote, recta, relo y rerelo
+// caja generica reutilizada por todos los modulos y por bote
 //
 // hp define el ancho util interior; el ancho exterior
 // es una consecuencia de sumarle la pared
