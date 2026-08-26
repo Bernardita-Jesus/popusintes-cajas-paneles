@@ -1,9 +1,11 @@
 #!/usr/bin/env bash
-# renderiza cada caja y panel a stl/. cada pieza es un modulo que su
-# archivo .scad fuente llama de a uno (ver recta.scad / relo.scad, que
-# alternan entre _caja y _panel), asi que esto genera un archivo
-# temporal por pieza que incluye la fuente y llama al modulo, lo
-# renderiza con openscad, y despues borra el temporal.
+# renderiza cada caja y panel a stl-vX.Y.Z/ (segun VERSION en
+# comun/versiones.scad, la misma version grabada en las piezas). cada
+# pieza es un modulo que su archivo .scad fuente llama de a uno (ver
+# recta.scad / relo.scad, que alternan entre _caja y _panel), asi que
+# esto genera un archivo temporal por pieza que incluye la fuente y
+# llama al modulo, lo renderiza con openscad, y despues borra el
+# temporal.
 #
 # uso:
 #   ./scripts/exportar-stl.sh              exporta todas las piezas
@@ -26,18 +28,37 @@ if [ -z "$openscad" ] || ! command -v "$openscad" >/dev/null 2>&1; then
 fi
 
 raiz_repo="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
-directorio_stl="$raiz_repo/stl"
+
+version="$(grep -m1 '^VERSION = ' "$raiz_repo/comun/versiones.scad" | sed -E 's/^VERSION = "([^"]+)".*/\1/')"
+if [ -z "$version" ]; then
+  echo "no se encontro VERSION en comun/versiones.scad" >&2
+  exit 1
+fi
+
+directorio_stl="$raiz_repo/stl-$version"
 mkdir -p "$directorio_stl"
 
 # nombre:directorio:archivo-fuente:llamada-al-modulo
 piezas=(
   "bote_caja:bote:bote_caja.scad:bote_caja(40)"
+  "ataconso_caja:ataconso:ataconso_caja.scad:ataconso_caja()"
+  "ataconso_panel:ataconso:ataconso_panel.scad:ataconso_panel()"
+  "compa_caja:compa:compa_caja.scad:compa_caja()"
+  "compa_panel:compa:compa_panel.scad:compa_panel()"
+  "envo_caja:envo:envo_caja.scad:envo_caja()"
+  "envo_panel:envo:envo_panel.scad:envo_panel()"
+  "pane_caja:pane:pane_caja.scad:pane_caja()"
+  "pane_panel:pane:pane_panel.scad:pane_panel()"
   "recta_caja:recta:recta_caja.scad:recta_caja()"
   "recta_panel:recta:recta_panel.scad:recta_panel()"
   "relo_caja:relo:relo_caja.scad:relo_caja()"
   "relo_panel:relo:relo_panel.scad:relo_panel()"
   "rerelo_caja:rerelo:rerelo_caja.scad:rerelo_caja()"
   "rerelo_panel:rerelo:rerelo_panel.scad:rerelo_panel()"
+  "secu_caja:secu:secu_caja.scad:secu_caja()"
+  "secu_panel:secu:secu_panel.scad:secu_panel()"
+  "suma_caja:suma:suma_caja.scad:suma_caja()"
+  "suma_panel:suma:suma_panel.scad:suma_panel()"
 )
 
 filtros=("$@")
