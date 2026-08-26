@@ -45,7 +45,7 @@ module compa_panel() {
       agujero_jack(ancho, alto, COLUMNA_DER, SALIDA_Y);
       agujero_led(ancho, alto, COLUMNA_DER, LUZ_Y);
 
-      grabados_panel(COMPA_TEXTO, COMPA_VERSION, ancho, alto);
+      grabados_panel(COMPA_TEXTO, VERSION, ancho, alto);
     }
   }
 }

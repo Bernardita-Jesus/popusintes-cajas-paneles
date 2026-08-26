@@ -17,7 +17,7 @@ module pane_panel() {
 
     union() {
       agujeros_tornillos(ancho, alto);
-      grabados_panel(PANE_TEXTO, PANE_VERSION, ancho, alto);
+      grabados_panel(PANE_TEXTO, VERSION, ancho, alto);
     }
   }
 }

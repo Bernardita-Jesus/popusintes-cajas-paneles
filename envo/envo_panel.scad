@@ -56,7 +56,7 @@ module envo_panel() {
       agujero_jack(ancho, alto, COLUMNA_DER, SALIDA_Y);
       agujero_led(ancho, alto, COLUMNA_DER, LUZ_Y);
 
-      grabados_panel(ENVO_TEXTO, ENVO_VERSION, ancho, alto);
+      grabados_panel(ENVO_TEXTO, VERSION, ancho, alto);
     }
   }
 }

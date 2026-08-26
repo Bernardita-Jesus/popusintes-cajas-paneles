@@ -78,7 +78,7 @@ module rerelo_panel() {
       agujero_jack(ancho, alto, COLUMNA_D, SALIDA_Y);
       agujero_led(ancho, alto, COLUMNA_D, LUCES_Y);
 
-      grabados_panel(RERELO_TEXTO, RERELO_VERSION, ancho, alto);
+      grabados_panel(RERELO_TEXTO, VERSION, ancho, alto);
     }
   }
 }

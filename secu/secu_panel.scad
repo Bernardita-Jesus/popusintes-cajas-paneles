@@ -59,7 +59,7 @@ module secu_panel() {
       agujero_jack(ancho, alto, COLUMNA_DER, SALIDA_Y);
       agujero_led(ancho, alto, COLUMNA_DER, LUCES_Y);
 
-      grabados_panel(SECU_TEXTO, SECU_VERSION, ancho, alto);
+      grabados_panel(SECU_TEXTO, VERSION, ancho, alto);
     }
   }
 }

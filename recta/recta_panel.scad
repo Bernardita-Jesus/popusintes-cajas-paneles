@@ -56,7 +56,7 @@ module recta_panel() {
       agujero_jack(ancho, alto, COLUMNA_DER, SALIDA_Y);
       agujero_led(ancho, alto, COLUMNA_DER, LUZ_Y);
 
-      grabados_panel(RECTA_TEXTO, RECTA_VERSION, ancho, alto);
+      grabados_panel(RECTA_TEXTO, VERSION, ancho, alto);
     }
   }
 }
