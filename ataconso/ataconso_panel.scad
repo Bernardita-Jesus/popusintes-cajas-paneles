@@ -41,7 +41,7 @@ module ataconso_panel() {
       agujero_jack(ancho, alto, COLUMNA, SALIDA_Y);
       agujero_led(ancho, alto, COLUMNA, LUZ_Y);
 
-      grabados_panel(ATACONSO_TEXTO, ATACONSO_VERSION, ancho, alto);
+      grabados_panel(ATACONSO_TEXTO, VERSION, ancho, alto);
     }
   }
 }
