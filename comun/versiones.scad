@@ -24,7 +24,9 @@ PANE_HP = 5;
 
 RECTA_TEXTO = "recta";
 RECTA_VERSION = "v0.0.3";
-RECTA_HP = 6;
+// 4 hp, igual que dimensiones::RECTA_ANCHO en rack/ (antes decia 6,
+// no coincidia con rack: corregido al portar el layout real del panel)
+RECTA_HP = 4;
 
 RELO_TEXTO = "relo";
 RELO_VERSION = "v0.0.3";

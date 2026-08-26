@@ -1,221 +1,84 @@
 // rerelo_panel.scad
+// agujeros copiados del layout de rack/src/Rerelo.cpp: tempo base y
+// resincronizado en la columna a (canal de referencia, sin desfase);
+// columnas b, c y d con perilla de desfase, trimpot atenuversor y
+// entrada cv cada una
 
 include <../comun/constantes.scad>
-include <../comun/versiones.scad>
+include <../comun/panel.scad>
+include <../comun/componentes.scad>
+include <../comun/tornillos.scad>
 include <../comun/texto.scad>
+include <../comun/columnas.scad>
+include <../comun/espaciado.scad>
+include <../comun/versiones.scad>
 
 module rerelo_panel() {
+  ancho = MODULO_ANCHO * RERELO_HP;
+  alto  = MODULO_ALTURA_3U;
 
-  // medidas del panel
-  ANCHO = MODULO_ANCHO * RERELO_HP;
-  ALTO = MODULO_ALTURA_3U;
-  ESPESOR = PANEL_ESPESOR;
+  COLUMNA_A = COLUMNAS_CUATRO_1;
+  COLUMNA_B = COLUMNAS_CUATRO_2;
+  COLUMNA_C = COLUMNAS_CUATRO_3;
+  COLUMNA_D = COLUMNAS_CUATRO_4;
 
-  // columnas para los elementos
-  // dos copias del relo (2 columnas cada una), una por mitad del panel
-  COLUMNA_1 = ANCHO * 0.15;
-  COLUMNA_2 = ANCHO * 0.35;
-  COLUMNA_3 = ANCHO * 0.65;
-  COLUMNA_4 = ANCHO * 0.85;
+  // tempo base, compartido por los cuatro canales
+  PPM_Y = 0.12;
 
-  // profundidad de agujeros
-  AGUJERO_ALTURA = ALTURA_AGUJERO_CONECTOR;
+  // a proposito no va centrado bajo el ppm: imita el layout de relo,
+  // donde resinc vive debajo del tempo
+  BOTON_RESINC_Y = 0.30;
+  ENTRADA_RESINC_Y = BOTON_RESINC_Y + ESPACIADO_DELTA_Y_BOTON_ENTRADA;
 
-  // cantidad de caras de los cilindros
-  $fn = 100;
+  // canal b arranca mas arriba que c y d, en diagonal, para el efecto
+  // escalera
+  DESFASE_B_Y = 0.56;
+  DESFASE_CV_ATEN_B_Y = DESFASE_B_Y + ESPACIADO_DELTA_Y_PERILLA_ATENUVERSOR;
+  ENTRADA_DESFASE_B_Y = DESFASE_B_Y + 2 * ESPACIADO_DELTA_Y_PERILLA_ATENUVERSOR;
 
-  ////////////////////
-  // referencias de los pernos
-  ////////////////////
+  DESFASE_C_Y = 0.42;
+  DESFASE_CV_ATEN_C_Y = DESFASE_C_Y + ESPACIADO_DELTA_Y_PERILLA_ATENUVERSOR;
+  ENTRADA_DESFASE_C_Y = DESFASE_C_Y + 2 * ESPACIADO_DELTA_Y_PERILLA_ATENUVERSOR;
 
-  // Distancia de los pernos respecto a los bordes del panel
-  // MARGEN_X y MARGEN_Y definidos en comun/constantes.scad
+  DESFASE_D_Y = 0.28;
+  DESFASE_CV_ATEN_D_Y = DESFASE_D_Y + ESPACIADO_DELTA_Y_PERILLA_ATENUVERSOR;
+  ENTRADA_DESFASE_D_Y = DESFASE_D_Y + 2 * ESPACIADO_DELTA_Y_PERILLA_ATENUVERSOR;
 
-  // Posición horizontal de los pernos
-  PERNO_IZQUIERDO = MARGEN_X;
-  PERNO_DERECHO = ANCHO - MARGEN_X;
-
-  // Posición vertical de los pernos
-  PERNO_SUPERIOR = ALTO - MARGEN_Y;
-  PERNO_INFERIOR = MARGEN_Y;
-
-  //////////////////////
-  // PERFORACIÓN PARA LOS PERNOS
-  //////////////////////
-
-  module agujero_perno() {
-    cylinder(
-      h = ESPESOR + 2,   // Atraviesa completamente el panel
-      d = M3_DIAMETRO_,  // Diámetro del agujero para el tornillo de montaje
-      $fn = 50
-    );
-  }
-
-  // cilindro pequeño leds
-  module cilindroMini(x, y) {
-
-    translate([x, y, -AGUJERO_ALTURA/2])
-    color("plum")
-    cylinder(
-      h = AGUJERO_ALTURA,
-      r = RADIO_AGUJERO_LED,
-      center = false
-    );
-
-  }
-
-  // cilindro mediana para jacks ts
-  module cilindroMediano(x, y) {
-
-    translate([x, y, -AGUJERO_ALTURA/2])
-    color("plum")
-    cylinder(
-      h = AGUJERO_ALTURA,
-      r = RADIO_AGUJERO_JACK,
-      center = false
-    );
-
-  }
-
-  // cilindro pequeña para botones
-  module cilindroPerilla(x, y) {
-
-    translate([x, y, -AGUJERO_ALTURA/2])
-    color("plum")
-    cylinder(
-      h = AGUJERO_ALTURA,
-      r = RADIO_AGUJERO_BOTON,
-      center = false
-    );
-
-  }
-
-  // cilindro grande para perilla
-  module cilindroGrande(x, y) {
-
-    translate([x, y, -AGUJERO_ALTURA/2])
-    color("plum")
-    cylinder(
-      h = AGUJERO_ALTURA,
-      r = RADIO_AGUJERO_PERILLA,
-      center = false
-    );
-
-  }
+  SALIDA_Y = 0.90;
+  LUCES_Y = SALIDA_Y - ESPACIADO_DELTA_Y_SALIDA_LUZ;
 
   difference() {
-
-    // Panel centrado
-    color("magenta")
-    cube([ANCHO, ALTO, ESPESOR], center = false);
+    panel_base(ancho, alto);
 
     union() {
+      agujeros_tornillos(ancho, alto);
 
-      // todas las medidas de distancias son aprox
+      agujero_perilla_grande(ancho, alto, COLUMNA_A, PPM_Y);
+      agujero_boton(ancho, alto, COLUMNA_A, BOTON_RESINC_Y);
+      agujero_jack(ancho, alto, COLUMNA_A, ENTRADA_RESINC_Y);
 
-      ////////////////////
-      // columna 1 (izquierda del primer relo)
-      ////////////////////
+      agujero_perilla_chica(ancho, alto, COLUMNA_B, DESFASE_B_Y);
+      agujero_trimpot(ancho, alto, COLUMNA_B, DESFASE_CV_ATEN_B_Y);
+      agujero_jack(ancho, alto, COLUMNA_B, ENTRADA_DESFASE_B_Y);
 
-      // perilla tempo
-      cilindroGrande(COLUMNA_1, ALTO*0.16);
+      agujero_perilla_chica(ancho, alto, COLUMNA_C, DESFASE_C_Y);
+      agujero_trimpot(ancho, alto, COLUMNA_C, DESFASE_CV_ATEN_C_Y);
+      agujero_jack(ancho, alto, COLUMNA_C, ENTRADA_DESFASE_C_Y);
 
-      // boton resincronizar
-      cilindroMediano(COLUMNA_1, ALTO*0.35);
+      agujero_perilla_chica(ancho, alto, COLUMNA_D, DESFASE_D_Y);
+      agujero_trimpot(ancho, alto, COLUMNA_D, DESFASE_CV_ATEN_D_Y);
+      agujero_jack(ancho, alto, COLUMNA_D, ENTRADA_DESFASE_D_Y);
 
-      // jack resincronizar
-      cilindroMediano(COLUMNA_1, ALTO*0.43);
+      agujero_jack(ancho, alto, COLUMNA_A, SALIDA_Y);
+      agujero_led(ancho, alto, COLUMNA_A, LUCES_Y);
+      agujero_jack(ancho, alto, COLUMNA_B, SALIDA_Y);
+      agujero_led(ancho, alto, COLUMNA_B, LUCES_Y);
+      agujero_jack(ancho, alto, COLUMNA_C, SALIDA_Y);
+      agujero_led(ancho, alto, COLUMNA_C, LUCES_Y);
+      agujero_jack(ancho, alto, COLUMNA_D, SALIDA_Y);
+      agujero_led(ancho, alto, COLUMNA_D, LUCES_Y);
 
-      // luz a
-      cilindroMini(COLUMNA_1, ALTO*0.85);
-
-      // jack a
-      cilindroMediano(COLUMNA_1, ALTO*0.90);
-
-      ////////////////////
-      // columna 2 (derecha del primer relo)
-      ////////////////////
-
-      // perilla desfase b
-      cilindroPerilla(COLUMNA_2, ALTO*0.58);
-
-      // perilla desface atenuversor
-      cilindroMediano(COLUMNA_2, ALTO*0.67);
-
-      // jack desfase b
-      cilindroMediano(COLUMNA_2, ALTO*0.75);
-
-      // luz b
-      cilindroMini(COLUMNA_2, ALTO*0.85);
-
-      // jack b
-      cilindroMediano(COLUMNA_2, ALTO*0.90);
-
-      ////////////////////
-      // columna 3 (izquierda del segundo relo)
-      ////////////////////
-
-      // perilla tempo
-      cilindroGrande(COLUMNA_3, ALTO*0.16);
-
-      // boton resincronizar
-      cilindroMediano(COLUMNA_3, ALTO*0.35);
-
-      // jack resincronizar
-      cilindroMediano(COLUMNA_3, ALTO*0.43);
-
-      // luz a
-      cilindroMini(COLUMNA_3, ALTO*0.85);
-
-      // jack a
-      cilindroMediano(COLUMNA_3, ALTO*0.90);
-
-      ////////////////////
-      // columna 4 (derecha del segundo relo)
-      ////////////////////
-
-      // perilla desfase b
-      cilindroPerilla(COLUMNA_4, ALTO*0.58);
-
-      // perilla desface atenuversor
-      cilindroMediano(COLUMNA_4, ALTO*0.67);
-
-      // jack desfase b
-      cilindroMediano(COLUMNA_4, ALTO*0.75);
-
-      // luz b
-      cilindroMini(COLUMNA_4, ALTO*0.85);
-
-      // jack b
-      cilindroMediano(COLUMNA_4, ALTO*0.90);
-
-      ////////////////////
-      // diferencias para los pernos
-      // no referenciados a las columnas
-      ////////////////////
-
-      // Perno superior izquierdo
-      translate([PERNO_IZQUIERDO, PERNO_SUPERIOR, -1]) agujero_perno();
-
-      // Perno inferior izquierdo
-      translate([PERNO_IZQUIERDO, PERNO_INFERIOR, -1]) agujero_perno();
-
-      // Perno superior derecho
-      translate([PERNO_DERECHO, PERNO_SUPERIOR, -1]) agujero_perno();
-
-      // Perno inferior derecho
-      translate([PERNO_DERECHO, PERNO_INFERIOR, -1]) agujero_perno();
-
-      ////////////////////
-      // grabados en la cara trasera
-      // franja libre de agujeros bajo el perno inferior
-      ////////////////////
-
-      texto_base(RERELO_TEXTO, ALTO * 0.024, ANCHO/2, ALTO * 0.055);
-      texto_base(RERELO_VERSION, ALTO * 0.02, ANCHO/2, ALTO * 0.093);
-
+      grabados_panel(RERELO_TEXTO, RERELO_VERSION, ancho, alto);
     }
-
   }
-
 }

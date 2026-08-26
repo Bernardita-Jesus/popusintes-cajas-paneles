@@ -45,6 +45,14 @@ RADIO_AGUJERO_JACK = 3.25;
 RADIO_AGUJERO_BOTON = 4.4;
 RADIO_AGUJERO_PERILLA = 5.6;
 
+// agujeros de componentes que rack/ usa pero que todavia no tenian
+// tamano aca: estimados a partir del tamano relativo de cada
+// componente en vcv (RoundBlackKnob 38px, RoundSmallBlackKnob 28px,
+// Trimpot 17px), a falta de medidas de las piezas fisicas. ajustar
+// tras probar con componentes reales
+RADIO_AGUJERO_PERILLA_CHICA = 4.2;
+RADIO_AGUJERO_TRIMPOT = 2.5;
+
 // constantes roscas M3
 // medidas en mm
 // rosca usada como traduccion de boss
