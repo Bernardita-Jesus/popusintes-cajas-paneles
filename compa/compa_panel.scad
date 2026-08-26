@@ -31,7 +31,7 @@ module compa_panel() {
     panel_base(ancho, alto);
 
     union() {
-      agujeros_tornillos(ancho, alto);
+      agujeros_tornillos(ancho, alto, ambos_lados = false);
 
       agujero_jack(ancho, alto, COLUMNA_IZQ, ENTRADA_A_1_Y);
       agujero_jack(ancho, alto, COLUMNA_IZQ, ENTRADA_A_2_Y);

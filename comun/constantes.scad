@@ -40,17 +40,17 @@ M3_DIAMETRO_ = 3.4;
 // medidas en mm
 PANEL_ESPESOR = 2;
 ALTURA_AGUJERO_CONECTOR = 30;
-RADIO_AGUJERO_LED = 1.7;
-RADIO_AGUJERO_JACK = 3.25;
+RADIO_AGUJERO_LED = 1.53; // PORHACER: ajustar tamanhos de perforaciones
+RADIO_AGUJERO_JACK = 2.925; // PORHACER: ajustar tamanhos de perforaciones
 RADIO_AGUJERO_BOTON = 4.4;
-RADIO_AGUJERO_PERILLA = 5.6;
+RADIO_AGUJERO_PERILLA = 5.04; // PORHACER: ajustar tamanhos de perforaciones
 
 // agujeros de componentes que rack/ usa pero que todavia no tenian
 // tamano aca: estimados a partir del tamano relativo de cada
 // componente en vcv (RoundBlackKnob 38px, RoundSmallBlackKnob 28px,
 // Trimpot 17px), a falta de medidas de las piezas fisicas. ajustar
 // tras probar con componentes reales
-RADIO_AGUJERO_PERILLA_CHICA = 4.2;
+RADIO_AGUJERO_PERILLA_CHICA = 3.78; // PORHACER: ajustar tamanhos de perforaciones
 RADIO_AGUJERO_TRIMPOT = 2.5;
 
 // constantes roscas M3

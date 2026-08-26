@@ -35,7 +35,7 @@ module relo_panel() {
     panel_base(ancho, alto);
 
     union() {
-      agujeros_tornillos(ancho, alto);
+      agujeros_tornillos(ancho, alto, ambos_lados = false);
 
       agujero_perilla_grande(ancho, alto, COLUMNA_IZQ, PPM_Y);
 

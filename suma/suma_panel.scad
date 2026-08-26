@@ -18,7 +18,7 @@ module suma_panel() {
     panel_base(ancho, alto);
 
     union() {
-      agujeros_tornillos(ancho, alto);
+      agujeros_tornillos(ancho, alto, ambos_lados = false);
       grabados_panel(SUMA_TEXTO, SUMA_VERSION, ancho, alto);
     }
   }
