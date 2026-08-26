@@ -33,9 +33,15 @@ Esto deja los archivos en `stl/`. También se puede filtrar por nombre de pieza,
 ### Cajas y paneles de los módulos
 
 - [bote](./bote/)
+- [ataconso](./ataconso/)
+- [compa](./compa/)
+- [envo](./envo/)
+- [pane](./pane/)
 - [recta](./recta/)
-- [relo](./reloj/)
+- [relo](./relo/)
 - [rerelo](./rerelo/)
+- [secu](./secu/)
+- [suma](./suma/)
 
 ## Licencia
 
