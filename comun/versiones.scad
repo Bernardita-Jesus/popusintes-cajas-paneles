@@ -4,7 +4,7 @@ include <./constantes.scad>
 
 // version compartida por todas las cajas y paneles: un solo string,
 // grabado igual en cada pieza exportada
-VERSION = "v0.0.5";
+VERSION = "v0.0.6";
 
 BOTE_TEXTO = "bote";
 

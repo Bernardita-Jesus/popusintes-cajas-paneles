@@ -41,7 +41,7 @@ M3_DIAMETRO_ = 3.4;
 PANEL_ESPESOR = 2;
 ALTURA_AGUJERO_CONECTOR = 30;
 RADIO_AGUJERO_LED = 1.53; // PORHACER: ajustar tamanhos de perforaciones
-RADIO_AGUJERO_JACK = 3.8; // jack ts, diametro 7.6mm medido
+RADIO_AGUJERO_JACK = 2.9; // jack ts, diametro 5.8mm medido
 RADIO_AGUJERO_BOTON = 4.4;
 RADIO_AGUJERO_PERILLA = 3.05; // perilla, diametro 6.1mm medido: unico tamanho para grande y chica
 
