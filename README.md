@@ -18,7 +18,7 @@ Para exportar todas las cajas y paneles a `.stl` con un solo comando:
 ./scripts/exportar-stl.sh
 ```
 
-Esto deja los archivos en `stl/`. También se puede filtrar por nombre de pieza, por ejemplo `./scripts/exportar-stl.sh relo` exporta solo `relo_caja.stl` y `relo_panel.stl`. Requiere tener `openscad` instalado (en Mac, si no está en el `PATH`, el script busca automáticamente `/Applications/OpenSCAD.app`).
+Esto deja los archivos en `stl-<version>/`, donde `<version>` es el valor de `VERSION` en [comun/versiones.scad](comun/versiones.scad) — la misma que se graba en cada pieza. Al cambiar `VERSION` y volver a exportar, se genera una carpeta `stl-<version>/` nueva. También se puede filtrar por nombre de pieza, por ejemplo `./scripts/exportar-stl.sh relo` exporta solo `relo_caja.stl` y `relo_panel.stl`. Requiere tener `openscad` instalado (en Mac, si no está en el `PATH`, el script busca automáticamente `/Applications/OpenSCAD.app`).
 
 ## Estructura del repositorio
 
@@ -36,6 +36,7 @@ Esto deja los archivos en `stl/`. También se puede filtrar por nombre de pieza,
 - [ataconso](./ataconso/)
 - [compa](./compa/)
 - [envo](./envo/)
+- [grilla](./grilla/)
 - [pane](./pane/)
 - [recta](./recta/)
 - [relo](./relo/)
