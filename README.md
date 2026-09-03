@@ -36,6 +36,7 @@ Esto deja los archivos en `stl/`. También se puede filtrar por nombre de pieza,
 - [ataconso](./ataconso/)
 - [compa](./compa/)
 - [envo](./envo/)
+- [noti](./noti/)
 - [pane](./pane/)
 - [recta](./recta/)
 - [relo](./relo/)

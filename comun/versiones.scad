@@ -2,9 +2,9 @@
 
 include <./constantes.scad>
 
-// version compartida por todas las cajas y paneles: un solo string,
-// grabado igual en cada pieza exportada
-VERSION = "v0.0.4";
+// version compartida por todas las cajas y paneles
+// grabado en cada pieza exportada
+VERSION = "v0.0.5";
 
 BOTE_TEXTO = "bote";
 
@@ -17,12 +17,13 @@ COMPA_HP = 4;
 ENVO_TEXTO = "envo";
 ENVO_HP = 4;
 
+NOTI_TEXTO = "noti";
+NOTI_HP = 8;
+
 PANE_TEXTO = "pane";
 PANE_HP = 5;
 
 RECTA_TEXTO = "recta";
-// 4 hp, igual que dimensiones::RECTA_ANCHO en rack/ (antes decia 6,
-// no coincidia con rack: corregido al portar el layout real del panel)
 RECTA_HP = 4;
 
 RELO_TEXTO = "relo";

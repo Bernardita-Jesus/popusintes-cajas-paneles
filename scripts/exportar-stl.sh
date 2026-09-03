@@ -47,6 +47,8 @@ piezas=(
   "compa_panel:compa:compa_panel.scad:compa_panel()"
   "envo_caja:envo:envo_caja.scad:envo_caja()"
   "envo_panel:envo:envo_panel.scad:envo_panel()"
+  "noti_caja:noti:noti_caja.scad:noti_caja()"
+  "noti_panel:noti:noti_panel.scad:noti_panel()"
   "pane_caja:pane:pane_caja.scad:pane_caja()"
   "pane_panel:pane:pane_panel.scad:pane_panel()"
   "recta_caja:recta:recta_caja.scad:recta_caja()"
