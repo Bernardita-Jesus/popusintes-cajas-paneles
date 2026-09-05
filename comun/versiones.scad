@@ -4,7 +4,7 @@ include <./constantes.scad>
 
 // version compartida por todas las cajas y paneles: un solo string,
 // grabado igual en cada pieza exportada
-VERSION = "v0.0.6";
+VERSION = "v0.0.7";
 
 BOTE_TEXTO = "bote";
 
@@ -46,3 +46,6 @@ SUMA_HP = 4;
 // versiones v0.0.x
 // pruebas de tamano
 // realizadas entre julio y agosto 2026
+//
+// v0.0.7: unificacion de la perilla a un solo tamano (antes habia
+// perilla grande y chica), probada en las perforaciones de grilla

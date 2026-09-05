@@ -44,6 +44,13 @@ Esto deja los archivos en `stl-<version>/`, donde `<version>` es el valor de `VE
 - [secu](./secu/)
 - [suma](./suma/)
 
+## Versiones
+
+La versión vive en `VERSION` en [comun/versiones.scad](comun/versiones.scad), se graba en cada pieza y da nombre a la carpeta `stl-<version>/` que genera el script de exportado.
+
+- **v0.0.7**: se unifica la perilla a un solo tamaño. Antes había `agujero_perilla_grande` (RoundBlackKnob) y `agujero_perilla_chica` (RoundSmallBlackKnob); ahora existe un único módulo `agujero_perilla` (Ø 6.1 mm) que usan todos los paneles. Las perforaciones se probaron renderizando los dos tamaños del panel `grilla` (4 hp y 8 hp) con OpenSCAD. STL en `stl-v0.0.7/`.
+- **v0.0.x** (julio–agosto 2026): pruebas de tamaño.
+
 ## Licencia
 
 MIT
