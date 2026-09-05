@@ -18,7 +18,7 @@ include <../comun/columnas.scad>
 include <../comun/espaciado.scad>
 include <../comun/versiones.scad>
 
-// perilla y jack ts usan agujero_perilla_grande() y agujero_jack(), que
+// perilla y jack ts usan agujero_perilla() y agujero_jack(), que
 // ya toman los diametros reales (RADIO_AGUJERO_PERILLA,
 // RADIO_AGUJERO_JACK) compartidos con todos los paneles
 
@@ -48,7 +48,7 @@ module grilla_panel(hp = GRILLA_HP_ANCHA) {
         for (i = [0 : GRILLA_PERILLAS - 1]) {
           py = GRILLA_Y_INICIO
              + (GRILLA_Y_FIN - GRILLA_Y_INICIO) * i / (GRILLA_PERILLAS - 1);
-          agujero_perilla_grande(ancho, alto, px, py);
+          agujero_perilla(ancho, alto, px, py);
           agujero_jack(ancho, alto, px, py + ESPACIADO_DELTA_Y_BOTON_ENTRADA);
         }
         agujero_jack(ancho, alto, px, SALIDA_Y);

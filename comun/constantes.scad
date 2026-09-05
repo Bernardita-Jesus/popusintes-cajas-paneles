@@ -19,7 +19,7 @@ PANEL_PROFUNDIDAD = 3.0;
 
 // constantes para panel
 // perilla
- RADIO_PERILLA_CHICA = 5;
+ RADIO_PERILLA = 5;
 
 // radio de redondeo de las esquinas del panel
 RADIO_BORDE_PANEL = 2;
@@ -43,14 +43,11 @@ ALTURA_AGUJERO_CONECTOR = 30;
 RADIO_AGUJERO_LED = 1.53; // PORHACER: ajustar tamanhos de perforaciones
 RADIO_AGUJERO_JACK = 2.9; // jack ts, diametro 5.8mm medido
 RADIO_AGUJERO_BOTON = 4.4;
-RADIO_AGUJERO_PERILLA = 3.05; // perilla, diametro 6.1mm medido: unico tamanho para grande y chica
+RADIO_AGUJERO_PERILLA = 3.05; // perilla, diametro 6.1mm medido: unica perilla, un solo tamanho
 
-// agujeros de componentes que rack/ usa pero que todavia no tenian
-// tamano aca: estimados a partir del tamano relativo de cada
-// componente en vcv (RoundBlackKnob 38px, RoundSmallBlackKnob 28px,
-// Trimpot 17px), a falta de medidas de las piezas fisicas. ajustar
-// tras probar con componentes reales
-RADIO_AGUJERO_PERILLA_CHICA = RADIO_AGUJERO_PERILLA; // mismo tamanho que la perilla grande
+// trimpot: estimado a partir del tamano relativo en vcv (Trimpot 17px),
+// a falta de medida de la pieza fisica. ajustar tras probar con el
+// componente real
 RADIO_AGUJERO_TRIMPOT = 2.5;
 
 // constantes roscas M3

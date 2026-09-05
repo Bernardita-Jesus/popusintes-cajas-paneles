@@ -42,16 +42,16 @@ module secu_panel() {
       agujeros_tornillos(ancho, alto);
 
       agujero_jack(ancho, alto, COLUMNA_IZQ, ENTRADA_TRIGGER_A_Y);
-      agujero_perilla_chica(ancho, alto, COLUMNA_IZQ, PASO_A_0_Y);
-      agujero_perilla_chica(ancho, alto, COLUMNA_IZQ, PASO_A_1_Y);
-      agujero_perilla_chica(ancho, alto, COLUMNA_IZQ, PASO_A_2_Y);
-      agujero_perilla_chica(ancho, alto, COLUMNA_IZQ, PASO_A_3_Y);
+      agujero_perilla(ancho, alto, COLUMNA_IZQ, PASO_A_0_Y);
+      agujero_perilla(ancho, alto, COLUMNA_IZQ, PASO_A_1_Y);
+      agujero_perilla(ancho, alto, COLUMNA_IZQ, PASO_A_2_Y);
+      agujero_perilla(ancho, alto, COLUMNA_IZQ, PASO_A_3_Y);
 
       agujero_jack(ancho, alto, COLUMNA_DER, ENTRADA_TRIGGER_B_Y);
-      agujero_perilla_chica(ancho, alto, COLUMNA_DER, PASO_B_0_Y);
-      agujero_perilla_chica(ancho, alto, COLUMNA_DER, PASO_B_1_Y);
-      agujero_perilla_chica(ancho, alto, COLUMNA_DER, PASO_B_2_Y);
-      agujero_perilla_chica(ancho, alto, COLUMNA_DER, PASO_B_3_Y);
+      agujero_perilla(ancho, alto, COLUMNA_DER, PASO_B_0_Y);
+      agujero_perilla(ancho, alto, COLUMNA_DER, PASO_B_1_Y);
+      agujero_perilla(ancho, alto, COLUMNA_DER, PASO_B_2_Y);
+      agujero_perilla(ancho, alto, COLUMNA_DER, PASO_B_3_Y);
 
       agujero_jack(ancho, alto, COLUMNA_IZQ, SALIDA_Y);
       agujero_led(ancho, alto, COLUMNA_IZQ, LUCES_Y);

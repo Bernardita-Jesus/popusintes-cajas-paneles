@@ -37,16 +37,11 @@ module agujero_boton(ancho, alto, px, py) {
   agujero_componente(RADIO_AGUJERO_BOTON, p[0], p[1]);
 }
 
-// RoundBlackKnob
-module agujero_perilla_grande(ancho, alto, px, py) {
+// RoundBlackKnob / RoundSmallBlackKnob: una sola perilla, mismo tamanho
+// para todos los paneles
+module agujero_perilla(ancho, alto, px, py) {
   p = posicion(ancho, alto, px, py);
   agujero_componente(RADIO_AGUJERO_PERILLA, p[0], p[1]);
-}
-
-// RoundSmallBlackKnob
-module agujero_perilla_chica(ancho, alto, px, py) {
-  p = posicion(ancho, alto, px, py);
-  agujero_componente(RADIO_AGUJERO_PERILLA_CHICA, p[0], p[1]);
 }
 
 // Trimpot

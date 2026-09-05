@@ -40,13 +40,13 @@ module envo_panel() {
     union() {
       agujeros_tornillos(ancho, alto, ambos_lados = false);
 
-      agujero_perilla_grande(ancho, alto, COLUMNA_IZQ, SUBIDA_A_Y);
-      agujero_perilla_grande(ancho, alto, COLUMNA_IZQ, BAJADA_A_Y);
+      agujero_perilla(ancho, alto, COLUMNA_IZQ, SUBIDA_A_Y);
+      agujero_perilla(ancho, alto, COLUMNA_IZQ, BAJADA_A_Y);
       agujero_jack(ancho, alto, COLUMNA_IZQ, ENTRADA_PULSO_A_Y);
       agujero_jack(ancho, alto, COLUMNA_IZQ, ENTRADA_FORZAR_A_Y);
 
-      agujero_perilla_grande(ancho, alto, COLUMNA_DER, SUBIDA_B_Y);
-      agujero_perilla_grande(ancho, alto, COLUMNA_DER, BAJADA_B_Y);
+      agujero_perilla(ancho, alto, COLUMNA_DER, SUBIDA_B_Y);
+      agujero_perilla(ancho, alto, COLUMNA_DER, BAJADA_B_Y);
       agujero_jack(ancho, alto, COLUMNA_DER, ENTRADA_PULSO_B_Y);
       agujero_jack(ancho, alto, COLUMNA_DER, ENTRADA_FORZAR_B_Y);
 
