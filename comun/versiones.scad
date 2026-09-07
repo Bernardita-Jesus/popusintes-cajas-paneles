@@ -2,9 +2,9 @@
 
 include <./constantes.scad>
 
-// version compartida por todas las cajas y paneles
-// grabado en cada pieza exportada
-VERSION = "v0.0.5";
+// version compartida por todas las cajas y paneles: un solo string,
+// grabado igual en cada pieza exportada
+VERSION = "v0.0.7";
 
 BOTE_TEXTO = "bote";
 
@@ -16,6 +16,12 @@ COMPA_HP = 4;
 
 ENVO_TEXTO = "envo";
 ENVO_HP = 4;
+
+GRILLA_TEXTO = "grilla";
+// dos tamanhos del panel de referencia: 4 hp con 2 columnas y 8 hp con
+// las 4 columnas del layout ancho (como rerelo)
+GRILLA_HP_CHICA = 4;
+GRILLA_HP_ANCHA = 8;
 
 NOTI_TEXTO = "noti";
 NOTI_HP = 8;
@@ -41,3 +47,6 @@ SUMA_HP = 4;
 // versiones v0.0.x
 // pruebas de tamano
 // realizadas entre julio y agosto 2026
+//
+// v0.0.7: unificacion de la perilla a un solo tamano (antes habia
+// perilla grande y chica), probada en las perforaciones de grilla

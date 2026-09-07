@@ -53,19 +53,19 @@ module rerelo_panel() {
     union() {
       agujeros_tornillos(ancho, alto);
 
-      agujero_perilla_grande(ancho, alto, COLUMNA_A, PPM_Y);
+      agujero_perilla(ancho, alto, COLUMNA_A, PPM_Y);
       agujero_boton(ancho, alto, COLUMNA_A, BOTON_RESINC_Y);
       agujero_jack(ancho, alto, COLUMNA_A, ENTRADA_RESINC_Y);
 
-      agujero_perilla_chica(ancho, alto, COLUMNA_B, DESFASE_B_Y);
+      agujero_perilla(ancho, alto, COLUMNA_B, DESFASE_B_Y);
       agujero_trimpot(ancho, alto, COLUMNA_B, DESFASE_CV_ATEN_B_Y);
       agujero_jack(ancho, alto, COLUMNA_B, ENTRADA_DESFASE_B_Y);
 
-      agujero_perilla_chica(ancho, alto, COLUMNA_C, DESFASE_C_Y);
+      agujero_perilla(ancho, alto, COLUMNA_C, DESFASE_C_Y);
       agujero_trimpot(ancho, alto, COLUMNA_C, DESFASE_CV_ATEN_C_Y);
       agujero_jack(ancho, alto, COLUMNA_C, ENTRADA_DESFASE_C_Y);
 
-      agujero_perilla_chica(ancho, alto, COLUMNA_D, DESFASE_D_Y);
+      agujero_perilla(ancho, alto, COLUMNA_D, DESFASE_D_Y);
       agujero_trimpot(ancho, alto, COLUMNA_D, DESFASE_CV_ATEN_D_Y);
       agujero_jack(ancho, alto, COLUMNA_D, ENTRADA_DESFASE_D_Y);
 
