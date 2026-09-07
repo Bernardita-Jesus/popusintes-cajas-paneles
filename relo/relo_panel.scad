@@ -37,12 +37,12 @@ module relo_panel() {
     union() {
       agujeros_tornillos(ancho, alto, ambos_lados = false);
 
-      agujero_perilla_grande(ancho, alto, COLUMNA_IZQ, PPM_Y);
+      agujero_perilla(ancho, alto, COLUMNA_IZQ, PPM_Y);
 
       agujero_boton(ancho, alto, COLUMNA_IZQ, BOTON_RESINC_Y);
       agujero_jack(ancho, alto, COLUMNA_IZQ, ENTRADA_RESINC_Y);
 
-      agujero_perilla_chica(ancho, alto, COLUMNA_DER, DESFASE_B_Y);
+      agujero_perilla(ancho, alto, COLUMNA_DER, DESFASE_B_Y);
       agujero_trimpot(ancho, alto, COLUMNA_DER, DESFASE_CV_ATEN_Y);
       agujero_jack(ancho, alto, COLUMNA_DER, ENTRADA_DESFASE_B_Y);
 

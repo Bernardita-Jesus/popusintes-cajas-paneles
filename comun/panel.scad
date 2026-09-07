@@ -48,7 +48,7 @@ module panel(
         // distribuidas en partes iguales a lo alto del panel
         union() {
             for (i = [1 : num_perillas])
-                perillaChica(ancho/2, i*100/(num_perillas+1) * altura/100, profundidad);
+                perilla(ancho/2, i*100/(num_perillas+1) * altura/100, profundidad);
 
             // grabados en la parte baja de la cara trasera
             if (texto != "")

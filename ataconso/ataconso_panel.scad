@@ -32,10 +32,10 @@ module ataconso_panel() {
     union() {
       agujeros_tornillos(ancho, alto, ambos_lados = false);
 
-      agujero_perilla_grande(ancho, alto, COLUMNA, FRECUENCIA_Y);
+      agujero_perilla(ancho, alto, COLUMNA, FRECUENCIA_Y);
       agujero_jack(ancho, alto, COLUMNA, ENTRADA_FRECUENCIA_Y);
 
-      agujero_perilla_grande(ancho, alto, COLUMNA, TIMBRE_Y);
+      agujero_perilla(ancho, alto, COLUMNA, TIMBRE_Y);
       agujero_jack(ancho, alto, COLUMNA, ENTRADA_TIMBRE_Y);
 
       agujero_jack(ancho, alto, COLUMNA, SALIDA_Y);
