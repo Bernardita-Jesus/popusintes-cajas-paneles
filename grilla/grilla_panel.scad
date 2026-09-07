@@ -5,8 +5,8 @@
 // espaciado.scad, como en recta / envo / relo) y uno de salida al pie
 // de la columna. lleva ademas los 4 tornillos de montaje.
 //
-// se genera en dos tamanhos (ver grilla.scad): 4 hp usa 2 columnas
-// (COLUMNAS_DOS) y 8 hp usa las 4 columnas del layout ancho
+// se genera en dos tamanhos (ver grilla.scad): 5 hp usa 2 columnas
+// (COLUMNAS_DOS) y 10 hp usa las 4 columnas del layout ancho
 // (COLUMNAS_CUATRO)
 
 include <../comun/constantes.scad>

@@ -1,5 +1,5 @@
 // grilla.scad
-// los dos tamanhos del panel de referencia, lado a lado: 4 hp y 8 hp
+// los dos tamanhos del panel de referencia, lado a lado: 5 hp y 10 hp
 
 $fn = 32;
 
