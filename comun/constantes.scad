@@ -15,7 +15,7 @@ CAJA_PARED = 2.0;
 // panel medidas ideales, exteriores
 PANEL_ANCHO = MODULO_ANCHO;
 PANEL_ALTURA = MODULO_ALTURA_3U;
-PANEL_PROFUNDIDAD = 3.0;
+PANEL_PROFUNDIDAD = 2.4;
 
 // constantes para panel
 // perilla
@@ -41,9 +41,9 @@ M3_DIAMETRO_ = 3.4;
 PANEL_ESPESOR = 2;
 ALTURA_AGUJERO_CONECTOR = 30;
 RADIO_AGUJERO_LED = 1.53; // PORHACER: ajustar tamanhos de perforaciones
-RADIO_AGUJERO_JACK = 2.9; // jack ts, diametro 5.8mm medido
+RADIO_AGUJERO_JACK = 3.1; // jack ts, agujero 6.2mm (holgura sobre 5.8mm medido)
 RADIO_AGUJERO_BOTON = 4.4;
-RADIO_AGUJERO_PERILLA = 3.05; // perilla, diametro 6.1mm medido: unica perilla, un solo tamanho
+RADIO_AGUJERO_PERILLA = 3.3; // perilla, agujero 6.6mm (holgura sobre 6.1mm medido): unica perilla, un solo tamanho
 
 // trimpot: estimado a partir del tamano relativo en vcv (Trimpot 17px),
 // a falta de medida de la pieza fisica. ajustar tras probar con el
