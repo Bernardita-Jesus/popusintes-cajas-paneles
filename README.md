@@ -37,6 +37,7 @@ Esto deja los archivos en `stl-<version>/`, donde `<version>` es el valor de `VE
 - [compa](./compa/)
 - [envo](./envo/)
 - [grilla](./grilla/)
+- [noti](./noti/)
 - [pane](./pane/)
 - [recta](./recta/)
 - [relo](./relo/)

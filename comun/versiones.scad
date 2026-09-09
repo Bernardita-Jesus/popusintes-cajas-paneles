@@ -23,12 +23,13 @@ GRILLA_TEXTO = "grilla";
 GRILLA_HP_CHICA = 5;
 GRILLA_HP_ANCHA = 10;
 
+NOTI_TEXTO = "noti";
+NOTI_HP = 8;
+
 PANE_TEXTO = "pane";
 PANE_HP = 5;
 
 RECTA_TEXTO = "recta";
-// 4 hp, igual que dimensiones::RECTA_ANCHO en rack/ (antes decia 6,
-// no coincidia con rack: corregido al portar el layout real del panel)
 RECTA_HP = 4;
 
 RELO_TEXTO = "relo";
