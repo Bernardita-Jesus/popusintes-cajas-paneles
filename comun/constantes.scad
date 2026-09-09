@@ -40,7 +40,7 @@ M3_DIAMETRO_ = 3.4;
 // medidas en mm
 PANEL_ESPESOR = 2;
 ALTURA_AGUJERO_CONECTOR = 30;
-RADIO_AGUJERO_LED = 1.53; // PORHACER: ajustar tamanhos de perforaciones
+RADIO_AGUJERO_LED = 2.2; // led, agujero 4.4mm
 RADIO_AGUJERO_JACK = 3.1; // jack ts, agujero 6.2mm (holgura sobre 5.8mm medido)
 RADIO_AGUJERO_BOTON = 4.4;
 RADIO_AGUJERO_PERILLA = 3.3; // perilla, agujero 6.6mm (holgura sobre 6.1mm medido): unica perilla, un solo tamanho
